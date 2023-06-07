@@ -17,7 +17,8 @@
       body {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: top;
+        margin-top: 50px;
         align-items: center;
         font-family: Avenir, sans-serif;
         background-color: #ffffff;
@@ -48,15 +49,63 @@
         font-size: 18px;
         color: #595959;
         line-height: 1.5;
-        margin-top: 30px;
+        margin-top: 10px;
         max-width: 500px;
         margin: 50px auto 0 auto;
+      }
+
+      p.intro {
+        margin-top: 50px;
+      }
+
+      p.team-description {
+        font-size: 0.9em;
+        margin-top: 20px;
+      }
+
+      p.bio-name {
+        font-weight: bold;
+      }
+
+      p.bio-job {
+        margin-top: 3px;
+        font-style: italic;
       }
 
       a {
         color: #000000;
         text-decoration: none;
         font-weight: 700;
+      }
+
+      .circle-image {
+        width: 201px;
+        height: 201px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .circle-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .team-container {
+        margin-top: 50px;
+      }
+
+      .bio-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
+        max-width: 800px;
+      }
+
+      .bio-container > div {
+        margin-left: 30px;
+        margin-right: 30px;
       }
     </style>
   </head>
@@ -71,7 +120,7 @@
       alt="northumbrian data full logo"
       class="full-logo"
     />
-    <p>
+    <p class="intro">
       northumbrian data is an ethical AI consultancy that provides expert advice
       and services to businesses looking to develop AI solutions that are fair,
       transparent, and accountable. Contact us at
@@ -80,5 +129,37 @@
       >
       to learn more.
     </p>
+    <div class="team-container">
+      <h2>The Team</h2>
+      <p class="team-description">
+        Our team has decades of experience in developing, managing and executing
+        AI and data projects in the medical, health and instrumentation space.
+        We have been working together now for a decade across academia and
+        industry.
+      </p>
+      <div class="bio-container">
+        <div class="bio">
+          <div class="circle-image">
+            <img src="cn.jpg" alt="Dr Chas Nelson" />
+          </div>
+          <p class="bio-name">Dr Chas Nelson</p>
+          <p class="bio-job">Data & AI Consultant</p>
+        </div>
+        <div class="bio">
+          <div class="circle-image">
+            <img src="ws.jpg" alt="Bill Shepherd" />
+          </div>
+          <p class="bio-name">Bill Shepherd</p>
+          <p class="bio-job">AI Project Consultant</p>
+        </div>
+        <div class="bio">
+          <div class="circle-image">
+            <img src="bo.jpg" alt="Professor Boguslaw Obara" />
+          </div>
+          <p class="bio-name">Prof. Boguslaw Obara</p>
+          <p class="bio-job">Academic AI Consultant</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
